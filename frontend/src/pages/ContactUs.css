@@ -1,0 +1,76 @@
+/* src/pages/ContactUs.css */
+.contact-us {
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.contact-us h1 {
+    color: #4CAF50;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.contact-us label {
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+
+.contact-us input,
+.contact-us textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact-us textarea {
+    min-height: 100px;
+}
+
+.contact-us button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-us button:hover {
+    background-color: #45a049;
+}
+
+.contact-us p {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Optional: Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .contact-us h1 {
+        font-size: 28px;
+    }
+
+    .contact-us form {
+        width: 90%;
+    }
+}
