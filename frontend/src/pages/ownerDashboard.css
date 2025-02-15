@@ -1,0 +1,167 @@
+/* Ensure the dashboard container fills the entire screen */
+.dashboard-container {
+  display: flex;
+  flex-direction: column; /* Arrange elements in a column */
+  min-height: 100vh; /* Full height of the viewport */
+  width: 100vw; /* Full width of the viewport */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light gray background */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  box-sizing: border-box; /* Include padding and border in element's width */
+}
+
+
+/* Sidebar (Left Section) Styles */
+.dashboard-sidebar {
+  background-color: #004d7a; /* Dark blue */
+  color: white;
+  width: 250px; /* Fixed width for sidebar */
+  flex-shrink: 0; /* Prevent sidebar from shrinking */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%; /* Full height of the container */
+  overflow-y: auto; /* Allow vertical scrolling for sidebar if content exceeds height */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Header Styles */
+.dashboard-header {
+  position: fixed; /* Make the header fixed at the top */
+  top: 0; /* Align it to the top */
+  left: 0; /* Align it to the left */
+  width: 100%; /* Ensure it spans the full screen width */
+  background-color: #004d7a; /* Dark blue */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  z-index: 1000; /* Place it above other elements */
+  box-sizing: border-box; /* Include padding in the width */
+  border-bottom: 2px solid #00334e; /* Optional bottom border for separation */
+}
+
+/* Navigation Styles */
+.dashboard-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0; /* Add spacing below header */
+  display: flex;
+  justify-content: center; /* Center align navigation items */
+}
+
+.dashboard-nav li {
+  margin: 0 15px; /* Spacing between nav items */
+}
+
+.dashboard-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.dashboard-nav a:hover {
+  background-color: #00334e; /* Darker blue on hover */
+}
+
+/* Main Content Styles */
+.dashboard-main {
+  flex-grow: 1; /* Ensure the content section expands */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align content horizontally */
+  justify-content: center; /* Center align content vertically */
+  padding: 20px;
+  background-color: white; /* White background for content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  border-radius: 8px; /* Rounded corners */
+  margin: 20px; /* Space around content */
+  overflow: hidden; /* Prevent scrolling inside content */
+  width: 100%; /* Ensure it fits within the viewport */
+  box-sizing: border-box; /* Include padding and margin in width calculation */
+}
+
+/* Paragraph Styles */
+.dashboard-content p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* List Styles */
+.dashboard-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dashboard-content li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Footer (Optional) */
+.dashboard-footer {
+  background-color: #004d7a; /* Dark blue footer */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  flex-shrink: 0;
+  margin-top: auto; /* Stick footer to the bottom */
+  width: 100%; /* Ensure full width */
+}
+
+.dashboard-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Disable Horizontal Scrolling for the Body */
+body {
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-nav ul {
+    flex-direction: column; /* Stack navigation items on smaller screens */
+    align-items: center;
+  }
+
+  .dashboard-nav li {
+    margin: 10px 0;
+  }
+
+  .dashboard-main {
+    margin: 10px; /* Reduce content margin on small screens */
+    padding: 15px;
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .dashboard-content p {
+    font-size: 1rem;
+  }
+
+  .dashboard-content li {
+    font-size: 0.9rem;
+  }
+}
+.dashboard-content p {
+  font-size: 1.8 rem;
+  color: #333;
+  margin:  200px auto; /* Center the paragraph and add bottom margin */
+  text-align: center; /* Horizontally center the text inside the p tag */
+  width: fit-content;
+  align-items: center; /* Make sure the width of the paragraph is fit to its content */
+}

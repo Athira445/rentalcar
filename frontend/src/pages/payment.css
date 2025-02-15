@@ -1,0 +1,78 @@
+.payment-page-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.payment-details-left,
+.payment-details-right {
+  width: 45%;
+  padding: 10px;
+}
+
+.card-input-container {
+  margin-bottom: 20px;
+}
+
+.card-input-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.card-element {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.payment-success {
+  display: flex;
+  align-items: center;
+  color: green;
+}
+
+.payment-success p {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.pay-now-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.pay-now-btn:disabled {
+  background-color: #ccc;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  margin-bottom: 10px;
+}
