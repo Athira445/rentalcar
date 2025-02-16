@@ -35,7 +35,8 @@ app.use('/public', express.static('public'));
 app.use('/api', carRoutes);  
 app.use('/api/payments', paymentRoutes); 
 app.use("/api", bookingRoutes); 
-app.use("/api", userRoutes);
+app.use('/api/users', userRoutes);
+app.use("/api", userRoutes); 
 
 
 // ✅ Use Payment Routes

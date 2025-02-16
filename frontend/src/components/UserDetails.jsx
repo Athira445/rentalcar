@@ -24,40 +24,24 @@ const UserDetails = () => {
   }, []);
 
   // Delete user function
-  const handleDelete = async () => {
-    const userId = localStorage.getItem("userId"); // Get user ID from localStorage
-  
-    if (!userId) {
-      alert("User ID not found. Please log in again.");
-      return;
-    }
-  
-    if (!window.confirm("Are you sure you want to delete your account?")) return;
-  
+  const handleDelete = async (id) => {
+    if (!window.confirm("Are you sure you want to delete this user?")) return;
+
     try {
-      const response = await fetch(`http://localhost:4000/api/users/delete`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ userId }) // Send user ID in request body
-      });
-  
-      // Ensure response is JSON
-      const result = await response.json();
-  
-      if (response.ok) {
-        alert(result.message || "User deleted successfully!");
-        localStorage.removeItem("userId"); // Remove user ID from localStorage
-        window.location.href = "/"; // Redirect after deletion
-      } else {
-        alert(result.error || "Error deleting user!");
-      }
-    } catch (err) {
-      console.error("Error deleting user:", err);
-      alert("Error deleting user. Check console for details.");
+        const response = await fetch(`http://localhost:4000/api/users/delete/${id}`, {
+            method: "DELETE",
+        });
+
+        if (!response.ok) throw new Error(`HTTP Error! Status: ${response.status}`);
+
+        alert("User deleted successfully!");
+        fetchUsers(); // Refresh the user list
+    } catch (error) {
+        console.error("Error deleting user:", error.message);
+        
     }
-  };
+};
+
   
   
   return (

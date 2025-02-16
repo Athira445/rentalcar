@@ -22,15 +22,15 @@ router.get("/users", async (req, res) => {
     res.status(500).json({ message: "Error retrieving renters", error: error.message });
   }
 });
-router.delete('/users/delete', async (req, res) => {
+router.delete('/users/delete/:id', async (req, res) => {
   try {
-    const { userId } = req.body; // Get user ID from request body
+    const { id } = req.params; // Get user ID from URL
 
-    if (!userId) {
+    if (!id) {
       return res.status(400).json({ error: "User ID is required" });
     }
 
-    const deletedUser = await User.findByIdAndDelete(userId);
+    const deletedUser = await User.findByIdAndDelete(id);
     if (!deletedUser) {
       return res.status(404).json({ error: "User not found" });
     }
